@@ -1,6 +1,6 @@
 # web-view README
 
-This is the README for your extension "web-view". After writing up a brief description, we recommend including the following sections.
+Test Webview
 
 ## Features
 

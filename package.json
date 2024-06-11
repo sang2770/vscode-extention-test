@@ -4,7 +4,7 @@
   "description": "",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.88.0"
+    "vscode": "^1.89.1"
   },
   "categories": [
     "Other"
@@ -33,12 +33,14 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "setup-test": "extest get-vscode -c 1.89.1 && extest get-chromedriver -c 1.89.1 && extest install-vsix",
+    "run-test": "npm run compile && extest run-tests ./out/test/ui-test.test.js -m ./out/test/config.js"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
-    "@types/vscode": "^1.88.0",
+    "@types/vscode": "^1.89.1",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "@vscode/test-cli": "^0.0.6",
