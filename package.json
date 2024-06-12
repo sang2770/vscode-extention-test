@@ -34,8 +34,8 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test",
-    "setup-test": "extest get-vscode -c 1.89.1 && extest get-chromedriver -c 1.89.1 && extest install-vsix",
-    "run-test": "npm run compile && extest run-tests ./out/test/ui-test.test.js -m ./out/test/config.js"
+    "setup-test": "extest get-vscode -c 1.89.1 -s .vscode-test && extest get-chromedriver -c 1.89.1 -s .vscode-test && extest install-vsix -s .vscode-test",
+    "run-test": "npm run compile && extest run-tests -s .vscode-test ./out/test/ui-test.test.js -m ./out/test/config.js"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
